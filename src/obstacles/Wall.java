@@ -4,7 +4,7 @@ import participants.ParticipantI;
 
 public class Wall implements ObstaclesI {
     private float high;
-    private String name= "Стена";
+    private String name = "Стена";
 
     public String getName() {
         return name;
@@ -22,7 +22,7 @@ public class Wall implements ObstaclesI {
 
     @Override
     public boolean handleParticipant(ParticipantI participant) {
-        if(participant.getMaxJumpHigh()>=this.high){
+        if (participant.getMaxJumpHigh() >= this.high) {
             return true;
         }
         return false;

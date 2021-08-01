@@ -4,13 +4,14 @@ import participants.ParticipantI;
 
 public class Track implements ObstaclesI {
     private float length;
-    private String name= "Беговая дорожка";
+    private String name = "Беговая дорожка";
 
     public String getName() {
         return name;
     }
-    public Track(float length){
-        this.length=length;
+
+    public Track(float length) {
+        this.length = length;
     }
 
     @Override
@@ -20,12 +21,11 @@ public class Track implements ObstaclesI {
 
     @Override
     public boolean handleParticipant(ParticipantI participant) {
-       if(participant.getMaxRunLength()>=this.length){
-           return true;
-       }
-       return false;
+        if (participant.getMaxRunLength() >= this.length) {
+            return true;
+        }
+        return false;
     }
-
 
 
 }

@@ -18,5 +18,4 @@ public interface ParticipantI {
     boolean toShowResult();
 
 
-
 }

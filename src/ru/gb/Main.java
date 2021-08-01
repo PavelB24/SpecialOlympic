@@ -23,8 +23,8 @@ public class Main {
 
     private static void toShowResults(List<ParticipantI> participants) {
         System.out.println();
-        for (ParticipantI participant: participants) {
-            if(participant.toShowResult()){
+        for (ParticipantI participant : participants) {
+            if (participant.toShowResult()) {
                 System.out.println(participant.getName() + " прошёл соровнование!");
             } else {
                 System.out.println(participant.getName() + " сошёл с дистанции, соревнование не прошёл");

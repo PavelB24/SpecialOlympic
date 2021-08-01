@@ -3,10 +3,10 @@ package participants;
 import obstacles.ObstaclesI;
 
 public class Human implements ParticipantI {
-   private String name;
-   private int maxRunLength;
-   private int maxJumpHigh;
-   private boolean isPassed;
+    private String name;
+    private int maxRunLength;
+    private int maxJumpHigh;
+    private boolean isPassed;
 
     public Human(String name, int maxRunLength, int maxJumpHigh) {
         this.name = name;
@@ -37,14 +37,15 @@ public class Human implements ParticipantI {
 
     @Override
     public boolean goThroughObstacle(ObstaclesI obstacles) {
-        if (obstacles.handleParticipant(this)){
-            System.out.println(this.getName() + " прошёл через препятствие "+ obstacles.getName()+ "!");
-            isPassed=true;
+        if (obstacles.handleParticipant(this)) {
+            System.out.println(this.getName() + " прошёл через препятствие " + obstacles.getName() + "!");
+            isPassed = true;
             return true;
         } else {
             System.out.println(this.getName() + " не справился и дисквалифицирован, при прохождении препятствия " + obstacles.getName() + "!");
-            isPassed=false;
-        return false;}
+            isPassed = false;
+            return false;
+        }
     }
 
     @Override
@@ -53,7 +54,7 @@ public class Human implements ParticipantI {
     }
 
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 }
